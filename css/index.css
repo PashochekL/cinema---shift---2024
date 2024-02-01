@@ -2,47 +2,183 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
+    background-color: rgb(252, 252, 252);
     font-family: "Open Sans", sans-serif;
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1600px;
     margin: 0 auto;
+    width: 100%;
 }
 
-.header_container{
+.header__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: 22px;
     height: 84px;
 }
 
-.header_logo {
-    height: 32px;
-    text-decoration: none;
-    color: rgb(130, 8, 244);
+.header__logo {
+    width: 48px;
+    height: 33.32px;
+    top: 4.82px;
+    left: 0.12px;
+    color: #9534D2;
+    font-weight: bold;
+}
+.header__profile {
+    width: 71px;
+    height: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.header__tickets {
+    width: 60px;
+    height: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.header__exit {
+    width: 51px;
+    height: 24px;
+    color: black;
+    font-weight: bold;
 }
 
 .movies {
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: -20%;
 }
 
 .movie {
-    width: 240px;
+    width: 298.67px;
+    height: 300px;
     margin: 10px;
+    margin-top: 24%;
+    border-radius: 8px;
+    position: relative;
 }
 
-.movie_cover-inner {
-    height: 360px;
+.movie__cover-inner {
+    display: inline-block;
+    position: relative;
+    gap: 16px;
+    height: 450px;
 }
 
-.movie_cover {
+.movie__cover {
     max-width: 100%;
     height: 100%;
+}
+
+.movie__info {
+    padding: 10px 0px;
+}
+
+.movie__title {
+    width: 298.67px;
+    height: 24px;
+    size: 20px;
+    line-height: 24px;
+    color: #141C24;
+    font-weight: bold;
+}
+
+.movie__subtitle {
+    width: 298.67px;
+    height: 20px;
+    size: 14px;
+    line-height: 20px;
+    color: #637083;
+    margin-top: 2%;
+}
+
+.rating {
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+}
+
+.rating__item {
+    font-size: 50px;
+    cursor: pointer;
+    color: #dcdcdc;
+    transition: .2s;
+}
+
+.rating__item:hover,
+.rating__item:hover ~ .rating__item {
+    color: #989898;
+}
+
+.rating[data-total-value="1"] .rating__item:nth-child(n + 5),
+.rating[data-total-value="2"] .rating__item:nth-child(n + 4),
+.rating[data-total-value="3"] .rating__item:nth-child(n + 3),
+.rating[data-total-value="4"] .rating__item:nth-child(n + 2),
+.rating[data-total-value="5"] .rating__item:nth-child(n + 1) {
+    color: orange;
+}
+
+.movie__cinemaSerch {
+    width: 298.67px;
+    height: 20px;
+    size: 14px;
+    line-height: 20px;
+    color: #637083;
+    margin-top: 20%;
+}
+
+.movie__category {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 12px;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    background-color: rgba(245, 245, 248, 1);
+    border-radius: 8px 0px 0px 0px;
+}
+
+.name__category {
+    line-height: 15px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+}
+
+.details__category{
+    line-height: 15px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+}
+
+.button__button {
+    padding: 16px, 32px, 16px, 32px;
+    width: 300px;
+    height: 50px;
+    size: 16px;
+    gap: 8px;
+    line-height: 24px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #9534D2;
+    margin-top: 5%;
+}
+
+.button__button:hover {
+    cursor: pointer;
+    background-color: #9d7fb0;
 }

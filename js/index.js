@@ -1,4 +1,5 @@
 const URL_POPULAR = "https://shift-backend.onrender.com/cinema/today";
+const URL_DETAILED = ""
 
 requestMovies(URL_POPULAR);
 
@@ -25,7 +26,8 @@ function displayMovies(data) {
                     />
                     <div class="movie__category">
                         <div class="name__category"></div>
-                        <div class="details__category">${movie.releaseDate}</div>
+                        <div class="details__category">${movie.genres[0]}, ${movie.country.name} <br><br> ${movie.releaseDate}
+                        </div>
                     </div>
                 </div>
                 <div class="movie__info">
@@ -39,7 +41,7 @@ function displayMovies(data) {
                         <div class="rating__item" data-item-value="1">★</div>
                         </div>
                     <div class="movie__cinemaSerch">kinopoisk - ${movie.userRatings.kinopoisk}</div>
-                    <a><button class="button__button">Подробнее</button></a>
+                    <a href="index2.html"><button class="button__button" id="${movie.id}">Подробнее</button></a>
                 </div>
         `;
         moviesEl.appendChild(movieEl);
